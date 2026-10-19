@@ -18,7 +18,9 @@ public class ShotGunController : WeaponController
 
 	protected string ani_shoot02_down = "W1200_LowerBody_Shooting02";
 
-	public GameObject fire_spark;
+    protected string ani_reload02 = "XM1014_UpperBody_Reload01";
+
+    public GameObject fire_spark;
 
 	protected GameObject hit_spark;
 
@@ -26,7 +28,7 @@ public class ShotGunController : WeaponController
 
 	protected Transform bullet_eff_ori;
 
-	private void Awake()
+    private void Awake()
 	{
 		weapon_type = WeaponType.ShotGun;
 	}
@@ -70,29 +72,36 @@ public class ShotGunController : WeaponController
 		ANI_IDLE_RUN = "W1200_UpperBody_Run01";
 		ANI_IDLE_SHOOT = "W1200_UpperBody_Idle01";
 		ANI_RELOAD = "W1200_UpperBody_Reload01";
-		ANI_SHIFT_WEAPON = "W1200_UpperBody_Shiftweapon01";
+        ANI_SHIFT_WEAPON = "W1200_UpperBody_Shiftweapon01";
 		ANI_IDLE_DOWN = "W1200_LowerBody_Idle01";
 		ANI_SHOOT_DOWN = "W1200_LowerBody_Shooting01";
 		ANI_RELOAD_DOWN = "W1200_LowerBody_Reload01";
 		player.GetComponent<Animation>()[ANI_IDLE_RUN].AddMixingTransform(spine);
 		player.GetComponent<Animation>()[ANI_IDLE_SHOOT].AddMixingTransform(spine);
-		player.GetComponent<Animation>()[ani_shoot01].AddMixingTransform(spine);
+        player.GetComponent<Animation>()[ani_shoot01].AddMixingTransform(spine);
 		player.GetComponent<Animation>()[ani_shoot02].AddMixingTransform(spine);
-		player.GetComponent<Animation>()[ANI_RELOAD].AddMixingTransform(spine);
-		player.GetComponent<Animation>()[ANI_SHIFT_WEAPON].AddMixingTransform(spine);
+        player.GetComponent<Animation>()[ANI_RELOAD].AddMixingTransform(spine);
+        player.GetComponent<Animation>()[ANI_SHIFT_WEAPON].AddMixingTransform(spine);
 		if (weapon_data.weapon_name == "Winchester1200")
 		{
 			render_obj = base.transform.Find("W1200").gameObject;
 			ANI_SHOOT = ani_shoot01;
 			ANI_SHOOT_DOWN = ani_shoot01_down;
 		}
-		else if (weapon_data.weapon_name == "Xm1014" || weapon_data.weapon_name == "XM12")
+		else if (weapon_data.weapon_name == "XM12")
+		{
+			render_obj = base.gameObject;
+			ANI_SHOOT = ani_shoot01;
+            ANI_SHOOT_DOWN = ani_shoot01_down;
+        }
+		else if (weapon_data.weapon_name == "Xm1014")
 		{
 			render_obj = base.gameObject;
 			ANI_SHOOT = ani_shoot02;
 			ANI_SHOOT_DOWN = ani_shoot02_down;
-		}
-		ResetReloadAniSpeed(player);
+			ANI_RELOAD = ani_reload02;
+        }
+        ResetReloadAniSpeed(player);
 		ResetFireAniSpeed(player);
 		base.SetWeaponAni(player, spine);
 	}

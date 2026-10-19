@@ -2041,6 +2041,7 @@ Animation:
   - {fileID: 7400000, guid: 4b19363365f06d24b98cae7123608b80, type: 2}
   - {fileID: 7400000, guid: b58e3b9d7211ab845bd39b3985c0560e, type: 2}
   - {fileID: 7400000, guid: 43f2deed7517aa949b82506bc3cf84f3, type: 2}
+  - {fileID: 7400000, guid: 7e3952042a6c77a46a29d4fbf8edbdad, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -2129,6 +2130,7 @@ MonoBehaviour:
   ANI_CHAISAW_SKILL: Electric_saw_OT01
   spine: {fileID: 4162427389403431}
   head_spine: {fileID: 4628688232181400}
+  head_renderer: []
   spine_ori_rot: {x: 0, y: 0, z: 0, w: 1}
   head_spine_ori_rot: {x: 0, y: 0, z: 0, w: 1}
   fire_light_wall_decay: 10

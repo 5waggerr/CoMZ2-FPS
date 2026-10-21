@@ -14,6 +14,8 @@ Prefab:
 --- !u!1 &1423040418516912
 GameObject:
   m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4756552777249371}
@@ -28,6 +30,8 @@ GameObject:
 --- !u!4 &4756552777249371
 Transform:
   m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1423040418516912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -39,12 +43,14 @@ Transform:
 --- !u!114 &114042091415086926
 MonoBehaviour:
   m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1423040418516912}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ae51e91281be2d4d9b450edabe52aca, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Instance: {fileID: 1808444710081079, guid: 2558140c0c5b71845a8dd5cbf439abaf, type: 2}
   Accessory:
   - {fileID: 1724259259992627, guid: 6e081eb56942b9348998e62723f43fde, type: 2}

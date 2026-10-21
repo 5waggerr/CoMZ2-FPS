@@ -22,7 +22,20 @@ public class ShotGunController : WeaponController
 
     protected string ani_reload03 = "Remington870_UpperBody_Reload01";
 
-    public GameObject fire_spark;
+    protected string ani_reload03_1 = "Remington870_UpperBody_Reload02";
+
+	private const int animation_reload_change = 1;
+
+	private bool use_alt_reload
+	{
+		get
+		{
+			return weapon_data != null && weapon_data.total_bullet_count == animation_reload_change;
+        }
+	}
+
+
+	public GameObject fire_spark;
 
 	protected GameObject hit_spark;
 
@@ -109,6 +122,17 @@ public class ShotGunController : WeaponController
             ANI_SHOOT = ani_shoot02;
             ANI_SHOOT_DOWN = ani_shoot02_down;
             ANI_RELOAD = ani_reload03;
+			Animation anim = player.GetComponent<Animation>();
+			AnimationState s = anim[ani_reload03_1];
+			if (s != null) 
+			{
+				s.AddMixingTransform(spine);
+					PlayerController playerController = player.GetComponent<PlayerController>();
+				if (use_alt_reload && playerController != null)
+				{
+					s.speed = playerController.avatar_data.reload_speed_val;
+				}
+            }
         }
         ResetReloadAniSpeed(player);
 		ResetFireAniSpeed(player);
@@ -140,6 +164,7 @@ public class ShotGunController : WeaponController
 	{
 		if (OnReadyFire(player, deltaTime) && weapon_data.EnableFire())
 		{
+
 			base.Fire(player, deltaTime);
 			fireable = true;
 			AnimationUtil.Stop(player.gameObject, player.GetFireStateAnimation(player.MoveState, player.FireState));
@@ -221,4 +246,13 @@ public class ShotGunController : WeaponController
 		}
 		return base.OnReadyFire(player, deltaTime);
 	}
+
+    public override string GetFireStateAnimation(PlayerStateType run_type, PlayerStateType fire_type)
+    {
+        if (weapon_data.weapon_name == "Remington870" && fire_type == PlayerStateType.Reload && use_alt_reload)
+		{
+			return ani_reload03_1;
+        }
+		return base.GetFireStateAnimation(run_type, fire_type);
+    }
 }

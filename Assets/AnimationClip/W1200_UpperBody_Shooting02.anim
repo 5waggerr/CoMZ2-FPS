@@ -37066,7 +37066,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.03333334
+  - time: 0.033333335
     functionName: PlayAudio
     data: ShotShotGun01
     objectReferenceParameter: {fileID: 0}

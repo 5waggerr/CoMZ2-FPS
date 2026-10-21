@@ -2494,6 +2494,13 @@
 					<width>36</width>
 					<height>36</height>
 				</FrameInfo>
+				<FrameInfo>
+					<frameName>Gameui_Remington870</frameName>
+					<x>848</x>
+					<y>564</y>
+					<width>175</width>
+					<height>98</height>
+				</FrameInfo>
 			</frames>
 		</TextureInfo>
 	</textureInfoHD>

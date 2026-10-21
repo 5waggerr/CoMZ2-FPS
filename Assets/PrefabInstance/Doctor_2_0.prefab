@@ -1734,6 +1734,7 @@ Animation:
   - {fileID: 7400000, guid: b58e3b9d7211ab845bd39b3985c0560e, type: 2}
   - {fileID: 7400000, guid: 43f2deed7517aa949b82506bc3cf84f3, type: 2}
   - {fileID: 7400000, guid: 7e3952042a6c77a46a29d4fbf8edbdad, type: 2}
+  - {fileID: 7400000, guid: a2c2e1396042c9c4182b0d4be82c5c8b, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

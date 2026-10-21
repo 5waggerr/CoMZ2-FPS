@@ -146,6 +146,19 @@
 		<Range base="0" max="0" />
 		<Ex explodeRange="4" />
 	</Weapon>
+	<!--Remington870-->
+	<Weapon weapon_name="Remington870" type="ShotGun" moveSpeedDrag="0.5" price ="430" showName="Remington870" comment=""
+          BuyCurrencyType="3" UpgradeCurrencyType="1" BulletShopCurrencyType="1" BulletBattleCurrencyType="1"
+          battleButtleCountRatio ="1" bulletShopPrice="3000" bulletBalletPrice="5000" initBullet ="100" buyBulletCount="100"
+          maxLevel="30" upPriceRatio="3" AfterFireTime="1" ComboBase="1" CrystalUnlockPrice="0" 
+          upDamagePriceRatio="1" upFrequencyPriceRatio="1" upClipPriceRatio="1" upStretchPriceRatio="1" upRangePriceRatio="1"
+          stretchRange="2" stretchRangeRun="5" AutoLock="0" Recoil="25" infinityAmmo="0" sellPrice="1500" 
+          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="60" combination="0" unlockDay="0" >
+		<Frequency base="0.5" max="0.2" />
+		<stretchMaxRange base="15" max="15" />
+		<Clip base="2" max="2" />
+		<Range base="8" max="12" />
+	</Weapon>
 	<!--Laser-->
 	<Weapon weapon_name="Laser" type="Laser" moveSpeedDrag="0.5" price="150" showName="Laser" comment=""
           BuyCurrencyType="3" UpgradeCurrencyType="1" BulletShopCurrencyType="1" BulletBattleCurrencyType="1"

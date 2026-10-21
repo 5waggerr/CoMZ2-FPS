@@ -2196,6 +2196,13 @@
 					<width>62</width>
 					<height>62</height>
 				</FrameInfo>
+				<FrameInfo>
+					<frameName>weapon_Remington870</frameName>
+					<x>11</x>
+					<y>586</y>
+					<width>302</width>
+					<height>128</height>
+				</FrameInfo>
 			</frames>
 		</TextureInfo>
 	</textureInfoHD>

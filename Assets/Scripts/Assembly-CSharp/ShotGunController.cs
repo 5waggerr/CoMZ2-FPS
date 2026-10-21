@@ -20,6 +20,8 @@ public class ShotGunController : WeaponController
 
     protected string ani_reload02 = "XM1014_UpperBody_Reload01";
 
+    protected string ani_reload03 = "Remington870_UpperBody_Reload01";
+
     public GameObject fire_spark;
 
 	protected GameObject hit_spark;
@@ -100,6 +102,13 @@ public class ShotGunController : WeaponController
 			ANI_SHOOT = ani_shoot02;
 			ANI_SHOOT_DOWN = ani_shoot02_down;
 			ANI_RELOAD = ani_reload02;
+        }
+        else if (weapon_data.weapon_name == "Remington870")
+        {
+            render_obj = base.gameObject;
+            ANI_SHOOT = ani_shoot02;
+            ANI_SHOOT_DOWN = ani_shoot02_down;
+            ANI_RELOAD = ani_reload03;
         }
         ResetReloadAniSpeed(player);
 		ResetFireAniSpeed(player);

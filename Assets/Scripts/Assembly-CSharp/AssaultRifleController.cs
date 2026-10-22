@@ -72,7 +72,7 @@ public class AssaultRifleController : WeaponController
 			ANI_RELOAD_DOWN = "AK_LowerBody_Reload01";
 			ANI_FIRE_READY = "AK_UpperBody_FireReady";
 		}
-		else if (weapon_data.weapon_name == "MP5" || weapon_data.weapon_name == "Uzi" || weapon_data.weapon_name == "P90")
+		else if (weapon_data.weapon_name == "MP5" || weapon_data.weapon_name == "Uzi")
 		{
 			ANI_IDLE_RUN = "MP5_UpperBody_Run01";
 			ANI_IDLE_SHOOT = "MP5_UpperBody_Idle01";
@@ -84,7 +84,19 @@ public class AssaultRifleController : WeaponController
 			ANI_RELOAD_DOWN = "MP5_LowerBody_Reload01";
 			ANI_FIRE_READY = "MP5_UpperBody_FireReady";
 		}
-		player.GetComponent<Animation>()[ANI_IDLE_RUN].AddMixingTransform(spine);
+        else if (weapon_data.weapon_name == "P90")
+        {
+            ANI_IDLE_RUN = "Pistol03_UpperBody_Run01";
+            ANI_IDLE_SHOOT = "Pistol03_UpperBody_Idle01";
+            ANI_SHOOT = "Pistol03_UpperBody_Shooting01";
+            ANI_RELOAD = "Pistol03_UpperBody_Reload01";
+            ANI_SHIFT_WEAPON = "MP5_UpperBody_Shiftweapon01";
+            ANI_IDLE_DOWN = "MP5_LowerBody_Idle01";
+            ANI_SHOOT_DOWN = "Pistol03_LowerBody_Shooting01";
+            ANI_RELOAD_DOWN = "MP5_LowerBody_Reload01";
+            ANI_FIRE_READY = "Pistol03_UpperBody_FireReady";
+        }
+        player.GetComponent<Animation>()[ANI_IDLE_RUN].AddMixingTransform(spine);
 		player.GetComponent<Animation>()[ANI_IDLE_SHOOT].AddMixingTransform(spine);
 		player.GetComponent<Animation>()[ANI_SHOOT].AddMixingTransform(spine);
 		player.GetComponent<Animation>()[ANI_RELOAD].AddMixingTransform(spine);

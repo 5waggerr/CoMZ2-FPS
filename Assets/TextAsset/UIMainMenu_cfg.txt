@@ -2203,6 +2203,13 @@
 					<width>302</width>
 					<height>128</height>
 				</FrameInfo>
+				<FrameInfo>
+					<frameName>weapon_P90</frameName>
+					<x>764</x>
+					<y>597</y>
+					<width>256</width>
+					<height>128</height>
+				</FrameInfo>
 			</frames>
 		</TextureInfo>
 	</textureInfoHD>

@@ -1930,9 +1930,9 @@ Animation:
   - {fileID: 7400000, guid: 7cd8d67a096b1774e859a11c61536e5f, type: 2}
   - {fileID: 7400000, guid: eb419d8cfbf030043a43c6ef97e67017, type: 2}
   - {fileID: 7400000, guid: af00a457f46303442b1620645c940e5d, type: 2}
-  - {fileID: 7400000, guid: 61818d280023e68429fb877c9e67fb3f, type: 2}
+  - {fileID: 7400000, guid: c2471a411973a4f44802b379f8f9d082, type: 2}
   - {fileID: 7400000, guid: 661e015ba95144b4da2786fec0da9d68, type: 2}
-  - {fileID: 7400000, guid: 2b299d785bdb3ef469c067ef8c255e01, type: 2}
+  - {fileID: 7400000, guid: 7877313778d0871499a9fcb0bc0d344c, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

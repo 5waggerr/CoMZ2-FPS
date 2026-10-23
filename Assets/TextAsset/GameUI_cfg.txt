@@ -2501,6 +2501,13 @@
 					<width>175</width>
 					<height>98</height>
 				</FrameInfo>
+				<FrameInfo>
+					<frameName>Gameui_P90</frameName>
+					<x>6</x>
+					<y>582</y>
+					<width>256</width>
+					<height>128</height>
+				</FrameInfo>
 			</frames>
 		</TextureInfo>
 	</textureInfoHD>

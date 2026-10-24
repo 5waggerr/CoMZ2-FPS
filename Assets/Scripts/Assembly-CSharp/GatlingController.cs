@@ -216,8 +216,8 @@ public class GatlingController : WeaponController
 				Vector3 force = (vector - Camera.main.transform.position).normalized * 50f;
 				Rigidbody component3 = gameObject.GetComponent<Rigidbody>();
 				component3.mass = 5f;
-				component3.drag = 1.5f;
-				component3.angularDrag = 1.5f;
+				component3.linearDamping = 1.5f;
+				component3.angularDamping = 1.5f;
 				component3.AddForceAtPosition(force, raycastHit.point, ForceMode.Impulse);
 				gameObject.layer = PhysicsLayer.WALL;
 				gameObject.AddComponent<RemoveTimerScript>().life = 3f;

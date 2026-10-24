@@ -1232,8 +1232,8 @@ public class EnemyController : ObjectController
 				neck_ori.transform.parent = head_broken.transform;
 			}
 			head_broken.GetComponent<Rigidbody>().mass = 1f;
-			head_broken.GetComponent<Rigidbody>().drag = 1.5f;
-			head_broken.GetComponent<Rigidbody>().angularDrag = 0f;
+			head_broken.GetComponent<Rigidbody>().linearDamping = 1.5f;
+			head_broken.GetComponent<Rigidbody>().angularDamping = 0f;
 			head_broken.GetComponent<Rigidbody>().useGravity = true;
 			head_broken.GetComponent<Rigidbody>().isKinematic = false;
 			head_broken.GetComponent<Rigidbody>().AddForceAtPosition((-hit_normal + Vector3.up).normalized * 25f, hit_point, ForceMode.Impulse);

@@ -23,8 +23,8 @@ public class IonProjectile : ProjectileController
 			Vector3 force = (obj.transform.position - base.transform.position).normalized * 100f;
 			Rigidbody component2 = obj.GetComponent<Rigidbody>();
 			component2.mass = 5f;
-			component2.drag = 1.5f;
-			component2.angularDrag = 1.5f;
+			component2.linearDamping = 1.5f;
+			component2.angularDamping = 1.5f;
 			component2.AddForceAtPosition(force, obj.transform.position, ForceMode.Impulse);
 			obj.layer = PhysicsLayer.WALL;
 			obj.AddComponent<RemoveTimerScript>().life = 3f;

@@ -14,7 +14,7 @@ public class MedicineProjectile : ProjectileController
 
 	public override void Start()
 	{
-		base.GetComponent<Rigidbody>().sleepVelocity = 0.01f;
+		base.GetComponent<Rigidbody>().sleepThreshold = 0.01f;
 	}
 
 	public override void OnProjectileCollideEnter(GameObject obj)

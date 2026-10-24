@@ -16,7 +16,7 @@ public class MineProjectile : ProjectileController
 
 	public override void Start()
 	{
-		base.GetComponent<Rigidbody>().sleepVelocity = 0.01f;
+		base.GetComponent<Rigidbody>().sleepThreshold = 0.01f;
 		base.GetComponent<Renderer>().enabled = false;
 		alive = true;
 	}

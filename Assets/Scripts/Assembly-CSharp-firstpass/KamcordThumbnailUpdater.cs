@@ -13,7 +13,7 @@ public class KamcordThumbnailUpdater : MonoBehaviour
 
 	public float thumbnailToScreenRatio = 0.4f;
 
-	private GUITexture theGuiTexture;
+	//private GUITexture theGuiTexture;
 
 	private float playButtonToThumbnailRatio = 0.5f;
 
@@ -21,15 +21,15 @@ public class KamcordThumbnailUpdater : MonoBehaviour
 
 	public void EnableThumbnail(bool enable)
 	{
-		if (theGuiTexture != null)
+		//if (theGuiTexture != null)
 		{
-			theGuiTexture.enabled = enable;
+			//theGuiTexture.enabled = enable;
 		}
 	}
 
 	private void Start()
 	{
-		base.gameObject.AddComponent<GUITexture>();
+		/*base.gameObject.AddComponent<GUITexture>();
 		GUITexture[] components = base.gameObject.GetComponents<GUITexture>();
 		if (components.Length == 0)
 		{
@@ -37,7 +37,7 @@ public class KamcordThumbnailUpdater : MonoBehaviour
 		}
 		theGuiTexture = components[0];
 		Kamcord.videoThumbnailReadyAtFilePath += VideoThumbnailReadyAtFilePath;
-		EnableThumbnail(false);
+		EnableThumbnail(false);*/
 	}
 
 	private void OnDestroy()
@@ -47,7 +47,7 @@ public class KamcordThumbnailUpdater : MonoBehaviour
 
 	private void Update()
 	{
-		if (!(theGuiTexture != null))
+		/*if (!(theGuiTexture != null))
 		{
 			return;
 		}
@@ -60,15 +60,15 @@ public class KamcordThumbnailUpdater : MonoBehaviour
 				Kamcord.ShowView();
 				break;
 			}
-		}
+		}*/
 	}
 
 	private void OnGUI()
 	{
-		if (theGuiTexture != null && theGuiTexture.enabled)
+		/*if (theGuiTexture != null && theGuiTexture.enabled)
 		{
 			GUI.Label(playButtonLocationAndSize, playButtonTexture);
-		}
+		}*/
 	}
 
 	public void VideoThumbnailReadyAtFilePath(string filepath)
@@ -82,7 +82,7 @@ public class KamcordThumbnailUpdater : MonoBehaviour
 	private IEnumerator WaitForLoadToFinishAndThenSetThumbnail(WWW loader)
 	{
 		yield return loader;
-		if (loader.error == null)
+		/*if (loader.error == null)
 		{
 			if (thumbnailToScreenRatio < 0.2f)
 			{
@@ -102,7 +102,7 @@ public class KamcordThumbnailUpdater : MonoBehaviour
 			theGuiTexture.pixelInset = new Rect(absoluteX, absoluteY, absoluteWidth, absoluteHeight);
 			theGuiTexture.texture = loader.texture;
 			EnableThumbnail(true);
-		}
+		}*/
 	}
 
 	private void SetThumbnailTextureToFilepath(string filepath)

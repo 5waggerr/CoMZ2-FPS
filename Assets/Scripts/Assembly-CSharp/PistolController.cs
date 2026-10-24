@@ -185,8 +185,8 @@ public class PistolController : WeaponController
 				Vector3 force = (vector - Camera.main.transform.position).normalized * 50f;
 				Rigidbody component2 = gameObject.GetComponent<Rigidbody>();
 				component2.mass = 5f;
-				component2.drag = 1.5f;
-				component2.angularDrag = 1.5f;
+				component2.linearDamping = 1.5f;
+				component2.angularDamping = 1.5f;
 				component2.AddForceAtPosition(force, raycastHit.point, ForceMode.Impulse);
 				gameObject.layer = PhysicsLayer.WALL;
 				gameObject.AddComponent<RemoveTimerScript>().life = 3f;

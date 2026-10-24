@@ -11,14 +11,14 @@ internal class PlayParticleEffect : MonoBehaviour
 
 	private void Start()
 	{
-		ParticleEmitter[] componentsInChildren = GetComponentsInChildren<ParticleEmitter>();
+		/*ParticleEmitter[] componentsInChildren = GetComponentsInChildren<ParticleEmitter>();
 		ParticleEmitter[] array = componentsInChildren;
 		foreach (ParticleEmitter particleEmitter in array)
 		{
 			GameObject gameObject = Object.Instantiate(particleEmitter.gameObject) as GameObject;
 			gameObject.GetComponent<ParticleEmitter>().emit = false;
 			m_emits.Add(gameObject);
-		}
+		}*/
 	}
 
 	private void Update()
@@ -30,9 +30,9 @@ internal class PlayParticleEffect : MonoBehaviour
 		}
 		foreach (GameObject emit in m_emits)
 		{
-			GameObject gameObject = Object.Instantiate(emit) as GameObject;
+			/*GameObject gameObject = Object.Instantiate(emit) as GameObject;
 			gameObject.transform.position += base.transform.position;
-			gameObject.GetComponent<ParticleEmitter>().Emit();
+			gameObject.GetComponent<ParticleEmitter>().Emit();*/
 		}
 		m_play_time = 0f;
 	}

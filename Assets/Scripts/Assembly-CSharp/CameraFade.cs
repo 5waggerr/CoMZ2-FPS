@@ -22,12 +22,12 @@ public class CameraFade : MonoBehaviour
 
 	public void Init()
 	{
-		base.transform.position = new Vector3(0f, 0f, cameraFadeDepth);
+		/*base.transform.position = new Vector3(0f, 0f, cameraFadeDepth);
 		base.transform.localScale = Vector3.zero;
 		base.gameObject.AddComponent<GUITexture>();
 		base.GetComponent<GUITexture>().texture = CameraTexture(Color.black);
 		base.GetComponent<GUITexture>().color = fadeInColor;
-		base.GetComponent<GUITexture>().pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
+		base.GetComponent<GUITexture>().pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);*/
 	}
 
 	protected Texture2D CameraTexture(Color color)
@@ -93,7 +93,7 @@ public class CameraFade : MonoBehaviour
 
 	private void Update()
 	{
-		if (isfadeout || isfadein)
+		/*if (isfadeout || isfadein)
 		{
 			lasttime += Time.deltaTime;
 			if (isfadeout)
@@ -111,7 +111,7 @@ public class CameraFade : MonoBehaviour
 				lasttime = 0f;
 				m_time = 0f;
 			}
-		}
+		}*/
 	}
 
 	private void OnDestroy()

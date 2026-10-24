@@ -351,46 +351,7 @@ public class UICoopHallController : UISceneController
 
 	private IEnumerator GetCoopIp()
 	{
-		IndicatorBlockController.ShowIndicator(TUIControls.gameObject, "Connecting to server...");
-		WWW www = new WWW("http://account.trinitigame.com/game/callofminizombies2/new_version/CoMZ2_version.bytes?rand=" + UnityEngine.Random.Range(10, 99999));
-		yield return www;
-		if (www.error != null)
-		{
-			Debug.Log(www.error);
-			IndicatorBlockController.Hide();
-			//GameMsgBoxController.ShowMsgBox(GameMsgBoxController.MsgBoxType.SingleButton, TUIControls.gameObject, "Unable to connect to the server! Please try again later.", OnOnConnectionFailedButton, null);
-			yield break;
-		}
-		string content2 = www.text;
-		content2 = Encipher(content2);
-		Configure cfg = new Configure();
-		cfg.Load(content2);
-		string ver2 = cfg.GetSingle("CoMZ2", "Ver");
-		string ver_test2 = cfg.GetSingle("CoMZ2", "TestVer");
-		ver2 = cfg.GetSingle("CoMZ2", "VerAndroid");
-		ver_test2 = cfg.GetSingle("CoMZ2", "TestVerAndroid");
-		coop_ip = cfg.GetSingle("CoMZ2", "CoopIP");
-		coop_port = int.Parse(cfg.GetSingle("CoMZ2", "CoopPort"));
-		coop_ip = cfg.GetSingle("CoMZ2", "CoopIPAndroid");
-		coop_port = int.Parse(cfg.GetSingle("CoMZ2", "CoopPortAndroid"));
-		if (ver2 == "2.1.2" || ver_test2 == "2.1.2")
-		{
-			if (ver2 == "2.1.2")
-			{
-				GameConfig.Instance.server_group_index = 0;
-			}
-			else if (ver_test2 == "2.1.2")
-			{
-				GameConfig.Instance.server_group_index = 500;
-			}
-			ConnectServer(coop_ip, coop_port);
-		}
-		else
-		{
-			Debug.Log("game version error.");
-			IndicatorBlockController.Hide();
-			GameMsgBoxController.ShowMsgBox(GameMsgBoxController.MsgBoxType.SingleButton, TUIControls.gameObject, "An updated version is required to continue playing.", OnVersionUpdate, null, false);
-		}
+		yield return UnityEngine.Random.Range(10, 99999);
 	}
 
 	private string Encipher(string data_encipher)

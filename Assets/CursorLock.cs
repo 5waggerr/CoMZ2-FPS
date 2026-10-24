@@ -7,7 +7,7 @@ public class CursorLock : MonoBehaviour
 	private static void Init()
 	{
 		System.Globalization.CultureInfo.CurrentCulture = new CultureInfo("en-us");
-		DontDestroyOnLoad(new GameObject("[CursorLock]", typeof(CursorLock));
+		DontDestroyOnLoad(new GameObject("[CursorLock]", typeof(CursorLock)));
 	}
 	
 	void Update()

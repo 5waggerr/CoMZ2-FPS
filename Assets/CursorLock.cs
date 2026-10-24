@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using System.Globalization;
 using UnityEngine;
 
 public class CursorLock : MonoBehaviour
@@ -9,10 +7,7 @@ public class CursorLock : MonoBehaviour
 	private static void Init()
 	{
 		System.Globalization.CultureInfo.CurrentCulture = new CultureInfo("en-us");
-	}
-	void Start()
-	{
-		DontDestroyOnLoad(gameObject);
+		DontDestroyOnLoad(new GameObject("[CursorLock]", typeof(CursorLock));
 	}
 	
 	void Update()

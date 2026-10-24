@@ -9,10 +9,11 @@ public class ShooterGameCamera : MonoBehaviour
 	private GameObject sub_shake_obj;
 
 	public Transform player;
+	public Transform playerHead;
 
 	public Transform target;
 
-	public float smooth_speed = 5f;
+	public float smooth_speed = 0f;
 
 	public Vector3 pivotOffset = new Vector3(0f, 1f, 0f);
 
@@ -145,11 +146,12 @@ public class ShooterGameCamera : MonoBehaviour
 				if (player == null)
 				{
 					player = GameSceneController.Instance.player_controller.transform;
+					playerHead = GameSceneController.Instance.player_controller.head_spine;
 				}
 				player.rotation = Quaternion.Euler(0f, angleH, 0f);
-				smoothPlayerPos = Vector3.MoveTowards(smoothPlayerPos, player.position, smooth_speed * Time.deltaTime);
-				smoothPlayerPos.x = player.position.x;
-				smoothPlayerPos.z = player.position.z;
+				smoothPlayerPos = Vector3.MoveTowards(smoothPlayerPos, playerHead.position, smooth_speed * Time.deltaTime);
+				smoothPlayerPos.x = playerHead.position.x;
+				smoothPlayerPos.z = playerHead.position.z;
 				Vector3 vector = smoothPlayerPos + quaternion2 * pivotOffset + quaternion * camOffset;
 				Vector3 vector2 = player.position + quaternion2 * closeOffset;
 				float num = Vector3.Distance(vector, vector2);

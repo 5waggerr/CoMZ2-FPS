@@ -191,6 +191,7 @@ public class GameSceneCoopController : GameSceneController
 		}
 		input_controller.Motor = player_controller.GetComponent<CharacterMotor>();
 		main_camera.player = player_controller.transform;
+		main_camera.playerHead = GameSceneController.Instance.player_controller.head_spine;
 		way_points = GameObject.FindGameObjectsWithTag("WayPoint");
 		GameObject[] tem_array = GameObject.FindGameObjectsWithTag("Wood_Box");
 		wood_box_list = new List<GameObject>(tem_array);

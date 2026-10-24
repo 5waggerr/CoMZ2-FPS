@@ -16565,8 +16565,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1.199115
-    height: 0.6437848
+    width: 0.425
+    height: 0.36296296
   near clip plane: -128
   far clip plane: 128
   field of view: 60
@@ -16604,8 +16604,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1626
-    height: 347
+    width: 816
+    height: 392
 --- !u!1 &1142983534925474
 GameObject:
   m_ObjectHideFlags: 0
@@ -106907,11 +106907,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shake_obj: {fileID: 1768173043753060}
   player: {fileID: 0}
+  playerHead: {fileID: 0}
   target: {fileID: 4786802781979359}
   smooth_speed: 5
-  pivotOffset: {x: 0, y: 1, z: 0}
-  camOffset: {x: 0, y: 0.2, z: 0}
-  closeOffset: {x: 0, y: 1.8, z: 0}
+  pivotOffset: {x: 0, y: 0.25, z: 0}
+  camOffset: {x: 0, y: 0, z: 0}
+  closeOffset: {x: 0, y: 0, z: 0}
   cameraSwingSpeed: 100
   maxVerticalAngle: 50
   minVerticalAngle: -50

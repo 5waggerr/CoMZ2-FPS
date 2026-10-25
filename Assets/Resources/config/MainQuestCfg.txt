@@ -9,5 +9,6 @@
   <MainQuest level="15" scene="Junkyard" mode="5" boss="Halloween" comment="A mighty boss finally takes the stage. Finish it off at full strength!" weapon="AK47" />
   <MainQuest level="18" scene="COM2_NORMAL_3" mode="4" boss="0" comment="Your friend has been surrounded by zombies. Rescue him now!" avatar="Doctor" />  
   <MainQuest level="19" scene="Lab_Boss_01" mode="5" boss="FatCook" comment="A mighty boss finally takes the stage. Finish it off at full strength!" weapon="Gatlin" />
-  <MainQuest level="22" scene="Lab_Boss_02" mode="5" boss="Shark" comment="A mighty boss finally takes the stage. Finish it off at full strength!" weapon="RPG" />
+  <MainQuest level="22" scene="Lab_Boss_02" mode="5" boss="Shark" comment="A mighty boss finally takes the stage. Finish it off at full strength!" weapon="P90" />
+  <MainQuest level="25" scene="Depot" mode="5" boss="Haoke_B" comment="A mighty boss finally takes the stage. Finish it off at full strength!" weapon="RPG" />
 </MainQuestCfg>

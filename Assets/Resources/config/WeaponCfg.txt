@@ -65,19 +65,6 @@
 		<Clip base="300" max="600" />
 		<Range base="0" max="0" />
 	</Weapon>
-	<!--P90-->
-	<Weapon weapon_name="P90" type="Rifle" moveSpeedDrag="0.5" price ="25000" showName="P-90" comment=""
-          BuyCurrencyType="1" UpgradeCurrencyType="1" BulletShopCurrencyType="1" BulletBattleCurrencyType="1"
-          battleButtleCountRatio ="1" bulletShopPrice="3000" bulletBalletPrice="3000" initBullet ="450" buyBulletCount="450"
-          maxLevel="30" upPriceRatio="26.3" AfterFireTime="1" ComboBase="0.8" CrystalUnlockPrice="29" 
-          upDamagePriceRatio="1" upFrequencyPriceRatio="1" upClipPriceRatio="1" upStretchPriceRatio="1" upRangePriceRatio="1"
-          stretchRange="1" stretchRangeRun="5" AutoLock="0" Recoil="25" infinityAmmo="0" sellPrice="1500" 
-          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="26.3" combination="0" unlockDay="0" >
-		<Frequency base="0.14" max="0.09" />
-		<stretchMaxRange base="20" max="10" />
-		<Clip base="350" max="700" />
-		<Range base="0" max="0" />
-	</Weapon>
 	<!--Gatlin-->
 	<Weapon weapon_name="Gatlin" type="Gatlin" moveSpeedDrag="2" price="50000" showName="Gatling" comment=""
           BuyCurrencyType="1" UpgradeCurrencyType="1" BulletShopCurrencyType="1" BulletBattleCurrencyType="1"
@@ -91,6 +78,19 @@
 		<Clip base="500" max="1000" />
 		<Range base="0" max="0" />
 	</Weapon>
+	<!--P90-->
+	<Weapon weapon_name="P90" type="Rifle" moveSpeedDrag="0.5" price ="25000" showName="P-90" comment=""
+          BuyCurrencyType="1" UpgradeCurrencyType="1" BulletShopCurrencyType="1" BulletBattleCurrencyType="1"
+          battleButtleCountRatio ="1" bulletShopPrice="3000" bulletBalletPrice="3000" initBullet ="450" buyBulletCount="450"
+          maxLevel="30" upPriceRatio="26.3" AfterFireTime="1" ComboBase="0.8" CrystalUnlockPrice="58" 
+          upDamagePriceRatio="1" upFrequencyPriceRatio="1" upClipPriceRatio="1" upStretchPriceRatio="1" upRangePriceRatio="1"
+          stretchRange="1" stretchRangeRun="5" AutoLock="0" Recoil="25" infinityAmmo="0" sellPrice="1500" 
+          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="26.3" combination="0" unlockDay="22" >
+		<Frequency base="0.14" max="0.09" />
+		<stretchMaxRange base="20" max="10" />
+		<Clip base="350" max="700" />
+		<Range base="0" max="0" />
+	</Weapon>
 	<!--RPG-->
 	<Weapon weapon_name="RPG" type="RPG" moveSpeedDrag="1.5" price="80000" showName="RPG-7" comment=""
           BuyCurrencyType="1" UpgradeCurrencyType="1" BulletShopCurrencyType="1" BulletBattleCurrencyType="1"
@@ -98,7 +98,7 @@
           maxLevel="30" upPriceRatio="30" AfterFireTime="1" ComboBase="2" CrystalUnlockPrice="79" 
           upDamagePriceRatio="1" upFrequencyPriceRatio="1" upClipPriceRatio="1" upStretchPriceRatio="1" upRangePriceRatio="1"
           stretchRange="5" stretchRangeRun="8" AutoLock="0" Recoil="10" infinityAmmo="0" sellPrice="80000" 
-          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="30" combination="0" unlockDay="22" >
+          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="30" combination="0" unlockDay="25" >
 		<Frequency base="1.2" max="1.2" />
 		<stretchMaxRange base="1" max="1" />
 		<Clip base="1" max="1" />

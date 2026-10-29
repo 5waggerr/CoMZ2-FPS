@@ -94,6 +94,15 @@ public class GameTUIEvent : MonoBehaviour
 		}
 	}
 
+	private void OnFOVSliderChange(TUIControl control, int eventType, float wparam, float lparam, object data)
+	{
+		if (eventType == 1)
+		{
+			GameData.Instance.fov_ratio = wparam;
+			GameData.Instance.fov_ratio = Mathf.Clamp(GameData.Instance.fov_ratio, 0f, 1f);
+		}
+	}
+
 	private void OnCgSkip(TUIControl control, int eventType, float wparam, float lparam, object data)
 	{
 		if (eventType == 3)

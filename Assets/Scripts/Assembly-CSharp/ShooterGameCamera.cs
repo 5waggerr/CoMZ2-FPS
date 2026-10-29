@@ -45,11 +45,11 @@ public class ShooterGameCamera : MonoBehaviour
 
 	protected float ry;
 
-	public float CAMERA_CHAISAW_FOV = 55f;
+	private float CAMERA_CHAISAW_FOV = 55f;
 
-	public float CAMERA_AIM_FOV = 50f;
+	private float CAMERA_AIM_FOV = 50f;
 
-	public float CAMERA_NORMAL_FOV = 70f;
+	private float CAMERA_NORMAL_FOV = 70f;
 
 	public float padding = 0.3f;
 
@@ -71,6 +71,8 @@ public class ShooterGameCamera : MonoBehaviour
 
 	private Quaternion before_sub_shake_ori_rot;
 
+	private float lastFov = -1;
+
 	public float AngleV
 	{
 		get
@@ -81,6 +83,7 @@ public class ShooterGameCamera : MonoBehaviour
 
 	private IEnumerator Start()
 	{
+		UpdateFOV();
 		GameSceneController.Instance.main_camera = this;
 		mask = (1 << PhysicsLayer.WALL) | (1 << PhysicsLayer.WALL_METAL) | (1 << PhysicsLayer.WALL_WOOD);
 		camera_trans = base.transform;
@@ -107,6 +110,8 @@ public class ShooterGameCamera : MonoBehaviour
 
 	private void LateUpdate()
 	{
+		if (lastFov != GameData.Instance.fov_ratio) UpdateFOV();
+
 		if (Time.deltaTime == 0f || Time.timeScale == 0f || player == null || !inited)
 		{
 			return;
@@ -321,5 +326,13 @@ public class ShooterGameCamera : MonoBehaviour
 		if (local == null) return;
 		bool firstperson = !camera_pause && GameSceneController.Instance.GamePlayingState == PlayingState.Gaming;
 		local.SetHeadVisible(!firstperson);
+	}
+
+	private void UpdateFOV()
+	{
+		lastFov = GameData.Instance.fov_ratio;
+		CAMERA_NORMAL_FOV = Mathf.Lerp(GameData.minFov, GameData.maxFov, GameData.Instance.fov_ratio);
+		CAMERA_AIM_FOV = CAMERA_NORMAL_FOV - 20f;
+		CAMERA_CHAISAW_FOV = CAMERA_NORMAL_FOV - 15f;
 	}
 }

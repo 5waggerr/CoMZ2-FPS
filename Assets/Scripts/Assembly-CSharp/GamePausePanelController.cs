@@ -5,14 +5,7 @@ public class GamePausePanelController : UIPanelController
 	public TUIButtonPush sound_button;
 
 	public TUISliderXX sensitivity_slider;
-
-	private void Start()
-	{
-	}
-
-	private void Update()
-	{
-	}
+	public TUISliderXX fov_slider;
 
 	public void ResetButtonState()
 	{
@@ -29,6 +22,10 @@ public class GamePausePanelController : UIPanelController
 		if (sensitivity_slider != null)
 		{
 			sensitivity_slider.Set(GameData.Instance.sensitivity_ratio);
+		}
+		if (fov_slider != null)
+		{
+			fov_slider.Set(GameData.Instance.fov_ratio);
 		}
 	}
 }

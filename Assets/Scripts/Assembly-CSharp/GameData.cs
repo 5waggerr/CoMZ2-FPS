@@ -90,6 +90,11 @@ public class GameData : MonoBehaviour
 
 	public float sensitivity_ratio = 0.4f;
 
+	public const float minFov = 70f;
+	public const float maxFov = 120f;
+
+	public float fov_ratio = 0f;
+
 	public bool is_enter_tutorial = true;
 
 	public bool show_ui_tutorial = true;
@@ -295,6 +300,7 @@ public class GameData : MonoBehaviour
 		int num = (int)cur_avatar;
 		configure.AddValueSingle("Save", "AvatarType", num.ToString(), string.Empty, string.Empty);
 		configure.AddValueSingle("Save", "SensitivityRatio", sensitivity_ratio.ToString(), string.Empty, string.Empty);
+		configure.AddValueSingle("Save", "FovRatio", fov_ratio.ToString(), string.Empty, string.Empty);
 		configure.AddValueSingle("Save", "Version", game_version, string.Empty, string.Empty);
 		configure.AddValueSingle("Save", "EnterShopCount", enter_shop_count.ToString(), string.Empty, string.Empty);
 		configure.AddValueSingle("Save", "TimeserverUrl", timeserver_url, string.Empty, string.Empty);
@@ -500,6 +506,7 @@ public class GameData : MonoBehaviour
 			day_level = int.Parse(configure.GetSingle("Save", "DayLevel"));
 			cur_avatar = (AvatarType)int.Parse(configure.GetSingle("Save", "AvatarType"));
 			sensitivity_ratio = float.Parse(configure.GetSingle("Save", "SensitivityRatio"));
+			fov_ratio = float.Parse(configure.GetSingle("Save", "FovRatio"));
 			int num = int.Parse(configure.GetSingle("Save", "EnterTutorial"));
 			is_enter_tutorial = ((num != 0) ? true : false);
 			game_version = configure.GetSingle("Save", "Version");
@@ -971,23 +978,23 @@ public class GameData : MonoBehaviour
 
 	public IEnumerator ResetCurServerTime()
 	{
-    	DateTime currentDateTime = DateTime.Now;
-    	last_checked_date_now = currentDateTime;
-    	next_cd_date = currentDateTime.AddDays(1.0);
-    	next_cd_date = new DateTime(next_cd_date.Year, next_cd_date.Month, next_cd_date.Day, 0, 0, 0);
-    	Debug.Log("last_checked_date_now:" + last_checked_date_now);
-    	Debug.Log("next_cd_date:" + next_cd_date);
-    	Debug.Log(string.Concat("cd:", next_cd_date - last_checked_date_now, " totalSec:", (next_cd_date - last_checked_date_now).TotalSeconds));
-    	string date = (cur_save_date = last_checked_date_now.Year.ToString() + last_checked_date_now.Month + last_checked_date_now.Day);
-    	daily_mode_enable = true;
-    	if (!LoadDailyData())
-    	{
-    	    SaveDailyData();
-    	}
-    	if (reset_nist_time_finish != null)
-    	{
-    	    reset_nist_time_finish();
-    	}
+		DateTime currentDateTime = DateTime.Now;
+		last_checked_date_now = currentDateTime;
+		next_cd_date = currentDateTime.AddDays(1.0);
+		next_cd_date = new DateTime(next_cd_date.Year, next_cd_date.Month, next_cd_date.Day, 0, 0, 0);
+		Debug.Log("last_checked_date_now:" + last_checked_date_now);
+		Debug.Log("next_cd_date:" + next_cd_date);
+		Debug.Log(string.Concat("cd:", next_cd_date - last_checked_date_now, " totalSec:", (next_cd_date - last_checked_date_now).TotalSeconds));
+		string date = (cur_save_date = last_checked_date_now.Year.ToString() + last_checked_date_now.Month + last_checked_date_now.Day);
+		daily_mode_enable = true;
+		if (!LoadDailyData())
+		{
+			SaveDailyData();
+		}
+		if (reset_nist_time_finish != null)
+		{
+			reset_nist_time_finish();
+		}
 		yield break;
 	}
 

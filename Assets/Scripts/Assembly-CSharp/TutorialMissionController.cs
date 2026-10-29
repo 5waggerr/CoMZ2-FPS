@@ -30,6 +30,7 @@ public class TutorialMissionController : MissionController
 			player = GameSceneController.Instance.player_controller;
 		}
 		yield return new WaitForSeconds(1f);
+		CursorLock.Locked = false;
 		GameObject guideObj = Object.Instantiate(Resources.Load("Prefab/GuideUI")) as GameObject;
 		guideObj.transform.parent = GameObject.Find("TUI/TUIControls").transform;
 		guideObj.transform.localPosition = new Vector3(0f, 0f, -100f);
@@ -37,6 +38,8 @@ public class TutorialMissionController : MissionController
 		guideController.Show(new MoveGuide(guideController));
 		yield return 1;
 		SpwanZombiesFromNest(EnemyType.E_ZOMBIE, zombie_nest_array[0]);
+		yield return new WaitForSeconds(0.01f);
+		CursorLock.Locked = true;
 		yield return new WaitForSeconds(3f);
 		Vector3 arrowPosition = Vector3.zero;
 		while (!EnemyNearPlayer(ref arrowPosition))

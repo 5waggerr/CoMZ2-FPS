@@ -489,7 +489,6 @@ public class GameSceneController : MonoBehaviour
 		InitMissionController();
 		yield return 2;
 		is_inited = true;
-		Screen.lockCursor = true;
 		LoadingUIController.FinishedLoading();
 		player_controller.UpdateWeaponUIShow();
 		TAudioController audio_controller = main_camera.gameObject.AddComponent<TAudioController>();
@@ -512,6 +511,15 @@ public class GameSceneController : MonoBehaviour
 
 	private void Update()
 	{
+#if UNITY_EDITOR
+		if (Input.GetKeyDown(KeyCode.Tab))
+#else
+		if (Input.GetKeyDown(KeyCode.Escape))
+#endif
+		{
+			if (Time.timeScale == 0f) OnGameResume();
+			else OnGamePause();
+		}
 		if (Time.deltaTime != 0f && Time.timeScale != 0f && Time.time - last_check_mission_finished >= check_mission_rate)
 		{
 			last_check_mission_finished = Time.time;
@@ -569,6 +577,7 @@ public class GameSceneController : MonoBehaviour
 
 	public virtual void InitMissionController()
 	{
+		CursorLock.Locked = true;
 		game_main_panel.HidePanels();
 		switch (GameData.Instance.cur_quest_info.mission_type)
 		{
@@ -669,7 +678,7 @@ public class GameSceneController : MonoBehaviour
 			GameData.Instance.day_level++;
 		}
 		GameData.Instance.SaveData();
-		Screen.lockCursor = false;
+		CursorLock.Locked = false;
 	}
 
 	private void MissionStatistics()
@@ -1069,6 +1078,8 @@ public class GameSceneController : MonoBehaviour
 
 	public virtual void OnGamePause()
 	{
+		CursorLock.Locked = false;
+
 		OpenClikPlugin.Show(false);
 		HidePanels();
 		game_pause_panel.Show();
@@ -1080,6 +1091,8 @@ public class GameSceneController : MonoBehaviour
 
 	public virtual void OnGameResume()
 	{
+		CursorLock.Locked = true;
+
 		OpenClikPlugin.Hide();
 		HidePanels();
 		game_main_panel.Show();
@@ -1352,6 +1365,7 @@ public class GameSceneController : MonoBehaviour
 
 	public void StartCameraRoam()
 	{
+		CursorLock.Locked = false;
 		OnGameCgStart();
 		string text = "SceneRoamPath";
 		switch (GameData.Instance.cur_quest_info.mission_type)
@@ -1370,6 +1384,7 @@ public class GameSceneController : MonoBehaviour
 
 	public void StopCameraRoam()
 	{
+		CursorLock.Locked = true;
 		is_skip_cg = true;
 		roam_order.OnEnd();
 		Instance.enable_boss_spawn = true;

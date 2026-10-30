@@ -134,7 +134,7 @@ public class PlatformInputController : MonoBehaviour
 		Quaternion quaternion = Quaternion.FromToRotation(Camera.main.transform.forward * -1f, base.transform.up);
 		zero = quaternion * zero;
 		zero = Quaternion.Inverse(base.transform.rotation) * zero;
-		if (!is_mobile)
+		if (!is_mobile && CursorLock.Locked)
 		{
 			if (Fire)
 			{

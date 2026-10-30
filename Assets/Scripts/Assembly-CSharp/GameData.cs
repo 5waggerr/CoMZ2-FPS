@@ -1339,7 +1339,7 @@ public class GameData : MonoBehaviour
 		string text2 = (string)(hashtable["data"] = JsonMapper.ToJson(action_data));
 		string s = JsonMapper.ToJson(hashtable);
 		byte[] post_data = XXTEAUtils.Encrypt(Encoding.UTF8.GetBytes(s), Encoding.UTF8.GetBytes("abcd@@##980[]L>."));
-		wwwClient.Instance.SendHttpRequest(statistics_url, post_data, OnStatisticsResponse, OnStatisticsRequestError, action_id);
+		//wwwClient.Instance.SendHttpRequest(statistics_url, post_data, OnStatisticsResponse, OnStatisticsRequestError, action_id);
 	}
 
 	public void OnStatisticsResponse(string action, byte[] response_data)

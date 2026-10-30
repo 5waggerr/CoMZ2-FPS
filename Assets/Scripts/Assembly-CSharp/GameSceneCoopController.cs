@@ -311,6 +311,7 @@ public class GameSceneCoopController : GameSceneController
 		audio_controller.PlayAudio(music_name);
 		Hashtable data_tem = new Hashtable { { "Count", 1 } };
 		GameData.Instance.UploadStatistics("Game_Count", data_tem);
+		CursorLock.Locked = true;
 	}
 
 	private void FixedUpdate()
@@ -323,6 +324,15 @@ public class GameSceneCoopController : GameSceneController
 
 	private void Update()
 	{
+		#if UNITY_EDITOR
+		if (Input.GetKeyDown(KeyCode.Tab))
+#else
+		if (Input.GetKeyDown(KeyCode.Escape))
+#endif
+		{
+			if (Time.timeScale == 0f) OnGameResume();
+			else OnGamePause();
+		}
 		if (Time.deltaTime != 0f && Time.timeScale != 0f && Time.time - last_check_mission_finished >= check_mission_rate)
 		{
 			last_check_mission_finished = Time.time;
@@ -694,6 +704,7 @@ public class GameSceneCoopController : GameSceneController
 
 	public override void OnGamePause()
 	{
+		CursorLock.Locked = false;
 		HidePanels();
 		game_pause_panel.Show();
 		((GamePausePanelController)game_pause_panel).ResetButtonState();
@@ -703,6 +714,7 @@ public class GameSceneCoopController : GameSceneController
 
 	public override void OnGameResume()
 	{
+		CursorLock.Locked = true;
 		OpenClikPlugin.Hide();
 		HidePanels();
 		game_main_panel.Show();

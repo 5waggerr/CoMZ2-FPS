@@ -105,13 +105,13 @@
 		<Range base="0" max="0" />
 	</Weapon>
 	<!--Usp45-->
-	<Weapon weapon_name="Usp45" type="Rifle" moveSpeedDrag="0.5" price ="25000" showName="Usp45" comment=""
+	<Weapon weapon_name="Usp45" type="DualRifle" moveSpeedDrag="0.5" price ="25000" showName="Usp45" comment=""
           BuyCurrencyType="1" UpgradeCurrencyType="1" BulletShopCurrencyType="1" BulletBattleCurrencyType="1"
           battleButtleCountRatio ="1" bulletShopPrice="3000" bulletBalletPrice="3000" initBullet ="450" buyBulletCount="450"
           maxLevel="30" upPriceRatio="26.3" AfterFireTime="1" ComboBase="0.8" CrystalUnlockPrice="58" 
           upDamagePriceRatio="1" upFrequencyPriceRatio="1" upClipPriceRatio="1" upStretchPriceRatio="1" upRangePriceRatio="1"
           stretchRange="1" stretchRangeRun="5" AutoLock="0" Recoil="25" infinityAmmo="0" sellPrice="1500" 
-          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="26.3" combination="0" unlockDay="-1" >
+          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="26.3" combination="0" unlockDay="-1" > shootSequential="true"
 		<Frequency base="1" max="0.7" />
 		<stretchMaxRange base="20" max="10" />
 		<Clip base="50" max="100" />

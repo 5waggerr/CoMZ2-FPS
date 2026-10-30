@@ -128,7 +128,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3744995405136338961}
-  - component: {fileID: 8395286394703901704}
   m_Layer: 0
   m_Name: 'bullet_eff_ori '
   m_TagString: Untagged
@@ -151,11 +150,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4731592414460269}
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
---- !u!33 &8395286394703901704
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8216211160390216183}
-  m_Mesh: {fileID: 4300002, guid: a81aee9f113c4544b99de12ec86549c8, type: 3}

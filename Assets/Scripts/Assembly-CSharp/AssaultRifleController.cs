@@ -98,14 +98,14 @@ public class AssaultRifleController : WeaponController
 		}
 		else if (weapon_data.weapon_name == "Usp45")
 		{
-			ANI_IDLE_RUN = "44 Magnum_Upperbody_Run01";
-			ANI_IDLE_SHOOT = "44 Magnum_Upperbody_Idle01";
-			ANI_SHOOT = "Deagle_UpperBody_Shooting01";
-			ANI_RELOAD = "Deagle_UpperBody_Reload01";
-			ANI_SHIFT_WEAPON = "44 Magnum_Upperbody_ShiftWeapon01";
-			ANI_IDLE_DOWN = "44 Magnum_Lowerbody_Idle01";
-			ANI_SHOOT_DOWN = "Deagle_UpperBody_Shooting01";
-            ANI_FIRE_READY = "Deagle_UpperBody_FireReady";
+			ANI_IDLE_RUN = "DualPistol_UpperBody_Run01";
+			ANI_IDLE_SHOOT = "DualPistol_UpperBody_Idle01";
+			ANI_SHOOT = "DualPistol_UpperBody_Shooting01";
+			ANI_RELOAD = "DualPistol_UpperBody_Reload01";
+			ANI_SHIFT_WEAPON = "DualPistol_UpperBody_ShiftWeapon";
+			ANI_IDLE_DOWN = "DualPistol_LowerBody_Idle01";
+			ANI_SHOOT_DOWN = "DualPistol_UpperBody_Shooting01";
+            ANI_FIRE_READY = "DualPistol_UpperBody_FireReady";
         }
 		else if (weapon_data.weapon_name == "Deagle")
 		{

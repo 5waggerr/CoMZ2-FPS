@@ -100,12 +100,24 @@ public class AssaultRifleController : WeaponController
 		{
 			ANI_IDLE_RUN = "44 Magnum_Upperbody_Run01";
 			ANI_IDLE_SHOOT = "44 Magnum_Upperbody_Idle01";
-			ANI_SHOOT = "44 Magnum_Upperbody_Shooting01";
+			ANI_SHOOT = "Deagle_UpperBody_Shooting01";
+			ANI_RELOAD = "Deagle_UpperBody_Reload01";
+			ANI_SHIFT_WEAPON = "44 Magnum_Upperbody_ShiftWeapon01";
+			ANI_IDLE_DOWN = "44 Magnum_Lowerbody_Idle01";
+			ANI_SHOOT_DOWN = "Deagle_UpperBody_Shooting01";
+            ANI_FIRE_READY = "Deagle_UpperBody_FireReady";
+        }
+		else if (weapon_data.weapon_name == "Deagle")
+		{
+			ANI_IDLE_RUN = "44 Magnum_Upperbody_Run01";
+			ANI_IDLE_SHOOT = "44 Magnum_Upperbody_Idle01";
+			ANI_SHOOT = "Deagle_UpperBody_Shooting01";
 			ANI_RELOAD = "Deagle_UpperBody_Reload01";
 			ANI_SHIFT_WEAPON = "44 Magnum_Upperbody_ShiftWeapon01";
 			ANI_IDLE_DOWN = "44 Magnum_Lowerbody_Idle01";
 			ANI_SHOOT_DOWN = "44 Magnum_Lowerbody_Shooting01";
-		}
+            ANI_FIRE_READY = "Deagle_UpperBody_FireReady";
+        }
         player.GetComponent<Animation>()[ANI_IDLE_RUN].AddMixingTransform(spine);
 		player.GetComponent<Animation>()[ANI_IDLE_SHOOT].AddMixingTransform(spine);
 		player.GetComponent<Animation>()[ANI_SHOOT].AddMixingTransform(spine);

@@ -86,4 +86,6 @@ public class WeaponConfig
 	public GameCurrencyType BulletShopCurrencyType;
 
 	public GameCurrencyType BulletBattleCurrencyType;
+
+	public bool shoot_sequential;
 }

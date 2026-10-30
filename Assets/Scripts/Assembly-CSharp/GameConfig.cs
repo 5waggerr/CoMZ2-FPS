@@ -466,6 +466,10 @@ public class GameConfig : MonoBehaviour
 			{
 				weaponConfig.unlock_day = int.Parse(item.GetAttribute("unlockDay"));
 			}
+			if (item.HasAttribute("shootSequential"))
+			{
+				weaponConfig.shoot_sequential = bool.Parse(item.GetAttribute("shootSequential"));
+			}
 			if (item.HasAttribute("sellPrice"))
 			{
 				weaponConfig.sell_price = new GameDataInt(int.Parse(item.GetAttribute("sellPrice")));
@@ -1175,6 +1179,9 @@ public class GameConfig : MonoBehaviour
 			break;
 		case "IceGun":
 			result = WeaponType.IceGun;
+			break;
+		case "DualRifle":
+			result = WeaponType.DualRifle;
 			break;
 		}
 		return result;

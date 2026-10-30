@@ -56,7 +56,7 @@ public class TrinitiAdAndroidPlugin : MonoBehaviour
 	private void Start()
 	{
 		sInstance = this;
-		StartCoroutine(init());
+		//StartCoroutine(init());
 	}
 
 	public void InitAdd()

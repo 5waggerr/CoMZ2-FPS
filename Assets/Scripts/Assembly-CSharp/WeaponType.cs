@@ -20,5 +20,6 @@ public enum WeaponType
 	Shield,
 	IonCannon,
 	IceGun,
+	DualRifle,
 	Gun_Count
 }

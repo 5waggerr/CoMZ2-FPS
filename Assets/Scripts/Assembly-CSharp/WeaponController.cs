@@ -94,9 +94,8 @@ public class WeaponController : MonoBehaviour
 
 	public virtual void Reset(Transform trans)
 	{
-		base.transform.position = trans.position + ori_pos;
 		base.transform.parent = trans;
-		base.transform.localRotation = Quaternion.identity;
+		transform.SetLocalPositionAndRotation(ori_pos, Quaternion.identity);
 		GunOff();
 	}
 

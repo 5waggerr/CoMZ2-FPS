@@ -79,6 +79,9 @@ public class WeaponFactory : MonoBehaviour
 		case WeaponType.IceGun:
 			result = "IceGunController";
 			break;
+		case WeaponType.DualRifle:
+			result = "DualAssaultRifleController";
+			break;
 		}
 		return result;
 	}

@@ -17,12 +17,12 @@ public class AssaultRifleController : WeaponController
 
 	protected Transform bullet_eff_ori;
 
-	private void Awake()
+	protected virtual void Awake()
 	{
 		weapon_type = WeaponType.AssaultRifle;
 	}
 
-	private void Start()
+	protected virtual void Start()
 	{
 		fire_ori = base.transform.Find("fire_ori");
 		if (fire_ori == null)

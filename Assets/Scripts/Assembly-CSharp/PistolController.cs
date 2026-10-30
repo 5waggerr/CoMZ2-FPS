@@ -48,7 +48,6 @@ public class PistolController : WeaponController
 		hit_wood.transform.position = Vector3.zero;
 		hit_wood.transform.rotation = Quaternion.identity;
 		hit_wood.GetComponent<ObjectPool>().Init("HitWood", Accessory[3], 3, 0.9f);
-		explode_radius = (float)weapon_data.config.Ex_conf["explodeRange"];
 	}
 
 	public override void Update()
@@ -70,9 +69,9 @@ public class PistolController : WeaponController
 		player.GetComponent<Animation>()[ANI_SHOOT].AddMixingTransform(spine);
 		player.GetComponent<Animation>()[ANI_RELOAD].AddMixingTransform(spine);
 		player.GetComponent<Animation>()[ANI_SHIFT_WEAPON].AddMixingTransform(spine);
-		ResetFireAniSpeed(player);
-		render_obj = base.gameObject;
-		base.SetWeaponAni(player, spine);
+			ResetFireAniSpeed(player);
+			render_obj = base.gameObject;
+			base.SetWeaponAni(player, spine);
 	}
 
 	public override void SetShopWeaponAni(GameObject player, Transform spine)

@@ -10282,6 +10282,8 @@ Animation:
   - {fileID: 7400000, guid: 5c8148a09191e1345ab9fd79668e4e3f, type: 2}
   - {fileID: 7400000, guid: b1ae639fdfbf384448564d8a5bb454b1, type: 2}
   - {fileID: 7400000, guid: 0321a514d0cfe3c49bebf81b958d341f, type: 2}
+  - {fileID: 7400000, guid: e61a578ade179e2468e8a3f9dcb909f2, type: 2}
+  - {fileID: 7400000, guid: 0ab0ca25d35af964ea7b68711371ccc9, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

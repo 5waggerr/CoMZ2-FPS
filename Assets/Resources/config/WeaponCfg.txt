@@ -59,7 +59,7 @@
           maxLevel="30" upPriceRatio="23.7" AfterFireTime="1" ComboBase="0.8" CrystalUnlockPrice="24" 
           upDamagePriceRatio="1" upFrequencyPriceRatio="1" upClipPriceRatio="1" upStretchPriceRatio="1" upRangePriceRatio="1"
           stretchRange="1" stretchRangeRun="5" AutoLock="0" Recoil="10" infinityAmmo="0" sellPrice="12000" 
-          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="23.7" combination="0" unlockDay="15" shootSequential="true">
+          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="23.7" combination="0" unlockDay="15">
 		<Frequency base="0.14" max="0.14" />
 		<stretchMaxRange base="20" max="10" />
 		<Clip base="300" max="600" />
@@ -111,7 +111,7 @@
           maxLevel="30" upPriceRatio="26.3" AfterFireTime="1" ComboBase="0.8" CrystalUnlockPrice="58" 
           upDamagePriceRatio="1" upFrequencyPriceRatio="1" upClipPriceRatio="1" upStretchPriceRatio="1" upRangePriceRatio="1"
           stretchRange="1" stretchRangeRun="5" AutoLock="0" Recoil="25" infinityAmmo="0" sellPrice="1500" 
-          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="26.3" combination="0" unlockDay="-1" > shootSequential="true"
+          existState ="0" secondaryWeapon="0" owner="All" dmgRatio="26.3" combination="0" unlockDay="-1" shootSequential="true">
 		<Frequency base="1" max="0.7" />
 		<stretchMaxRange base="20" max="10" />
 		<Clip base="50" max="100" />
